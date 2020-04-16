@@ -1,8 +1,6 @@
 type Query {
     "Lista de los estudiantes de la academia"
-    students: [Student],
-    "buscar estudiante por ID"
-    student(id: ID): Student
+    students: [String],
 }
 
 "Informacion de los estudiantes"
