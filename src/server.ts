@@ -15,4 +15,4 @@ const port = 5001;
 const httpServer = createServer(app);
 httpServer.listen({port}, ()=> {
     console.log(`Acamedia Online Started! ${port}`);
-})
+});
