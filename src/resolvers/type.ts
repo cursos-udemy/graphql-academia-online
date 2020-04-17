@@ -8,7 +8,7 @@ const types: IResolvers = {
         courses : (parent) => {
             const list: Array<any> = [];
             parent.courses.map( (course: string) => {
-                list.push(_.filter(database.curses,['id', course])[0]);
+                list.push(_.filter(database.courses,['id', course])[0]);
             });
             return list;
         }

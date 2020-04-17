@@ -12,7 +12,10 @@ const query: IResolvers = {
             return database.students.find(student => student.id === id);
         },
         courses(): any {
-            return database.curses;
+            return database.courses;
+        },
+        course( __: void, {id}): any {
+            return database.courses.find(course => course.id === id);
         }
     }
 }
