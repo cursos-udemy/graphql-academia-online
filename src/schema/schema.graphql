@@ -15,7 +15,7 @@ type Mutation {
     "Modificar un curso de la academia"
     updateCourse(course: CourseInput!): Course,
     "Eliminar un curso de la academia"
-    deleteCourse(id: ID!): String
+    deleteCourse(id: ID!): Course
 }
 
 "Informacion de los estudiantes"
