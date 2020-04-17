@@ -13,7 +13,7 @@ type Mutation {
     "Agregar un nuevo curso a la academia"
     addCourse(course: CourseInput!): Course!,
     "Modificar un curso de la academia"
-    updateCourse(course: CourseInput!): Course!,
+    updateCourse(course: CourseInput!): Course,
     "Eliminar un curso de la academia"
     deleteCourse(id: ID!): String
 }
