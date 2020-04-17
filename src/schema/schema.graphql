@@ -9,6 +9,15 @@ type Query {
     course(id: ID!): Course
 }
 
+type Mutation {
+    "Agregar un nuevo curso a la academia"
+    addCourse(course: CourseInput!): Course!,
+    "Modificar un curso de la academia"
+    updateCourse(course: CourseInput!): Course!,
+    "Eliminar un curso de la academia"
+    deleteCourse(id: ID!): String
+}
+
 "Informacion de los estudiantes"
 type Student {
     "Identificador del estudiante"
@@ -53,4 +62,16 @@ type Review{
     name: String!,
     points: Float!,
     comment: String!
+}
+
+input CourseInput {
+    id: ID,
+    title: String!,
+    description: String!,
+    clases: Int!,
+    time: Float!,
+    level: Level = TODOS,
+    logo: String!,
+    path: String!,
+    teacher: String!
 }
