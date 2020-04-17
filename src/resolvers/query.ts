@@ -10,6 +10,9 @@ const query: IResolvers = {
         },
         student(__: void, { id }): any {
             return database.students.find(student => student.id === id);
+        },
+        courses(): any {
+            return database.curses;
         }
     }
 }
