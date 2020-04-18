@@ -1,7 +1,6 @@
 {
-    "name": "gwf-academia-graphql",
     "version": 2,
-    "build": [
+    "builds": [
         {
             "src": "build/server.js",
             "use": "@now/node",
