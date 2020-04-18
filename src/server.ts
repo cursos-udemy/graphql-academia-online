@@ -3,7 +3,7 @@ import compression from 'compression';
 import cors from 'cors';
 import { ApolloServer } from 'apollo-server-express';
 import { createServer } from 'http';
-import expressPlayGround from 'graphql-playground-middleware-express'
+import expressPlayground from 'graphql-playground-middleware-express'
 import schema from './schema'
 
 const app = express();
@@ -16,7 +16,7 @@ const apolloServer = new ApolloServer({
 });
 apolloServer.applyMiddleware({ app });
 
-app.use('/', expressPlayGround({
+app.use('/', expressPlayground({
     endpoint: "/graphql"
 }));
 

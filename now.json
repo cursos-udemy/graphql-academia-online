@@ -1,0 +1,21 @@
+{
+    "name": "f1-graphql",
+    "version": 2,
+    "build": [
+        {
+            "src": "build/server.js",
+            "use": "@now/node",
+            "config": {
+                "includeFiles": [
+                    "build/schema/**/*.graphql"
+                ]
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "build/server.js"
+        }
+    ]
+}
